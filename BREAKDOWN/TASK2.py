@@ -98,23 +98,3 @@ def generate_valid_ringtone( ringtone: str ) -> list:
 
         
     return [] # if the ringtone fails to meet all of the criteria.
-    
-
-    
-
-#used for manual testing purpose
-if __name__ == "__main__":
-    
-    # creating testcases for the function.
-    ringtoneTrues: list = ['Scale:d=4,o=5,b=60:4c5,4d5,4e5,4f5,4g5,4a5,4b5,4c6', 'd=8,o=4,b=100:4c5,4d5,4e5,4f5,4g5,4a5,4b5,4c6', '4c6,4b5,4a5,4g5,4f5,4e5,4d5,4c5', 'Twinkle Twinkle:d=4,o=5,b=80:32p,8c,8c,8g,8g,8a,8a,g', 'D= 8 , O  =  4,B =100 :4c5, 4d5,4 e5, 4f 5,4g5, 4a5,  4B5, 4C 6', '4c6,    4b 5,4A 5,4 g5,  4f5, 4e5, 4D5,4C5', 'Twinkle Twinkle : d =4 ,o= 5, B=80: 32p,8 c, 8 c,    8g,   8G,8 A ,8A,    G', 'Scale::4c5']
-    ringtoneFalses: list = ['Twinkle Twinkle : d=4 ,o=5, c=80: 32p,8c, 8c,    8g,   8G,8A ,8A,    G', 'd=4 ,b =80 ,   o=5 : 32p,     8c, 8c,    8 g  ,   8G,8A ,8A,    G', 'Twinkle Twinkle: d=4,o=5, B=80:32p,8c,8 c,40g,8g,8a ,8a,12g6', 'Twinkle Twinkle: d=4,o=5, b=80:32P,8m,8c,8g,8g,8AAA ,8A,g', 'Twinkle Twinkle: d=4,o=5, b=80:32p,8  c,8c,86,8g,45 ,8a,g', 'Twinkle Twinkle : d=4 *o=5, B=80: 32p*8c* 8c*    8  g,   8G,8A ,8A,    G', 'Twinkle Twinkle: d=4-o=5- b=80:32p-8c-8  c,8g,8g,8a ,8a-g', 'Twinkle Twinkle: d=4,o=5,b=80', 'Scale:d=-4,o=-5,b=-60:4c5,4d5,4e5,4f5,4g5,4a5,4b5,4c6']
-    
-    for ringtone in ringtoneTrues:
-        print(ringtone)
-        print(generate_valid_ringtone(ringtone))
-        print()
-    
-    for ringtone in ringtoneFalses:
-        print(ringtone)
-        print(generate_valid_ringtone(ringtone))
-        print()
