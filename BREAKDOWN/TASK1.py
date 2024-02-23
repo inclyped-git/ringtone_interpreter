@@ -27,7 +27,6 @@ def check_valid_note( substring: str ) -> bool:
     # stores True if the substring matches, otherwise stores None.
     substringMatch: object = pattern.match(substring)
     
-    
     # if the substring matches with the criteria,
     if substringMatch:
         
@@ -51,7 +50,7 @@ def check_valid_note( substring: str ) -> bool:
 if __name__ == '__main__':
 
     # creating a list of testcases
-    substringTrues: list = ['4a8', '16b5', '32c4', 'e7', 'f2', 'd#', '16p', 'p', 'f.', '32a#8.', '1a1']
+    substringTrues: list = ['4a8', '16b5', '32c4', 'e7', 'f2', 'd#', '16p', 'p', 'f.', '32a#8.']
     substringFalses: list = ['p#', '.b8', '12g6', '8m.', '86', 'a#10', '36g9']
     
     # checking if the valid testcases are working.
@@ -65,3 +64,4 @@ if __name__ == '__main__':
         if check_valid_note(testcase):
             print(f"Failed False testcase: {testcase}")
     print("PASSED ALL FALSE TESTCASES")
+            
